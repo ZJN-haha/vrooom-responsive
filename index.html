@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -533,4 +534,541 @@
   </footer>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vrooom — Mercedes Vision AVTR</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background-image: url('assets/mercedes-vision-avtr.webp');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+
+    /* Optional dark overlay */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+      z-index: 0;
+    }
+
+    /* Logo */
+    .hero-logo {
+      position: absolute;
+      left: 2px;
+      width: 30%;
+      transform: rotate(-8deg);
+      z-index: 0;
+    }
+
+    .hero-logo img {
+      width: 100%;
+    }
+
+    /* Text box */
+    .hero-text {
+      position: absolute;
+      bottom: 3%;
+      left: 5%;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-left: 6px solid #f6e3b4;
+      border-radius: 10px;
+      backdrop-filter: blur(1px);
+      z-index: 0;
+    }
+
+    .hero-text h1 {
+      font-size: 3em;
+      color: #a0fcf7;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 1.2em;
+      color: #fff;
+    }
+
+    /* Video box */
+    .hero-video {
+      position: absolute;
+      bottom: 5%;
+      right: 3%;
+      width: 40%;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+      z-index: 0;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: transform 0.3s ease, width 0.3s ease;
+      transform-origin: right bottom;
+    }
+
+    .hero-video:hover {
+      transform: scale(1.3);
+    }
+
+    .hero-video video {
+      width: 100%;
+      display: block;
+      border-radius: 2px;
+    }
+
+    /* CARD SECTION */
+    .card-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px 10%;
+      background-color: #ffffff;
+    }
+
+    .top-card, .card {
+      flex: 1 1 300px;
+      max-width: 350px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .top-card {
+      background: rgb(248, 240, 194);
+      border: 1px solid #f97705;
+    }
+
+    .top-card:hover {
+      transform: translateY(10px);
+      box-shadow: 0 12px 24px rgba(101, 247, 205, 0.1);
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
+
+    /* TEST DRIVE FORM SECTION */
+    .form-section {
+      background-color: #f0f8ff;
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .form-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .form-title {
+      font-size: 2.2em;
+      color: #003566;
+      margin-bottom: 20px;
+    }
+
+    .form-subtitle {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    .test-drive-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .form-group {
+      text-align: left;
+    }
+
+    .form-group.full-width {
+      grid-column: span 2;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1em;
+      transition: border 0.3s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #0077cc;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      grid-column: span 2;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 1.1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #005fa3;
+    }
+
+    /* FOOTER SECTION */
+    footer {
+      background-color: #222;
+      color: #fff;
+      padding: 50px 10%;
+    }
+    
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .footer-column {
+      flex: 1;
+      min-width: 200px;
+    }
+    
+    .footer-column h3 {
+      color: #f6e3b4;
+      margin-bottom: 20px;
+    }
+    
+    .footer-column p {
+      line-height: 1.6;
+    }
+    
+    .footer-column ul {
+      list-style: none;
+      line-height: 2;
+    }
+    
+    .footer-column a {
+      color: #a0fcf7;
+      text-decoration: none;
+    }
+    
+    .footer-column address {
+      font-style: normal;
+      line-height: 1.6;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .social-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5em;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      margin-top: 10px;
+    }
+    
+    .newsletter-form input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px 0 0 5px;
+    }
+    
+    .newsletter-form button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 0 15px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid #444;
+      margin-top: 40px;
+      padding-top: 20px;
+      text-align: center;
+    }
+    
+    .footer-bottom p {
+      color: #aaa;
+      font-size: 0.9em;
+    }
+    
+    .footer-bottom a {
+      color: #aaa;
+      text-decoration: none;
+    }
+    
+    .legal-text {
+      color: #666;
+      font-size: 0.8em;
+      margin-top: 10px;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 1200px) {
+      .top-card, .card {
+        flex: 1 1 calc(50% - 30px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-text {
+        position: static;
+        margin: 20px auto;
+        background: rgba(0,0,0,0.7);
+        text-align: center;
+      }
+
+      .hero-video {
+        position: static;
+        width: 90%;
+        margin: 20px auto;
+      }
+
+      .hero-video:hover {
+        transform: scale(1.1);
+      }
+
+      .card-section {
+        padding: 30px 5%;
+      }
+
+      .top-card, .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      .test-drive-form {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full-width {
+        grid-column: span 1;
+      }
+
+      .submit-btn {
+        grid-column: span 1;
+      }
+      
+      .footer-column {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-logo">
+      <img src="assets/logo-enh.png" alt="Vrooom Logo">
+    </div>
+
+    <div class="hero-text">
+      <h1>Mercedes Vision AVTR</h1>
+      <p>A marriage between art and science.</p>
+    </div>
+
+    <div class="hero-video">
+      <video autoplay loop muted>
+        <source src="assets/avtr-demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- CARD SECTION -->
+  <section class="card-section">
+    <div class="top-card">
+      <h3>Top Speed</h3>
+      <p>Reaches up to 220mph on open track with aerodynamic support.</p>
+    </div>
+    <div class="top-card">
+      <h3>Acceleration</h3>
+      <p>0 to 60mph in just 3.0 seconds. The surge you feel is real.</p>
+    </div>
+    <div class="top-card">
+      <h3>Eco Mode</h3>
+      <p>Fuel-efficient and clean in city mode — go fast and green.</p>
+    </div>
+    <div class="card">
+      <h3>Smart Interior</h3>
+      <p>Includes voice assistant, panoramic HUD, memory seats, and climate AI.</p>
+    </div>
+    <div class="card">
+      <h3>Biometric Connectivity</h3>
+      <p>The car responds to your heartbeat and breathing patterns for a truly immersive drive.</p>
+    </div>
+    <div class="card">
+      <h3>Sustainable Materials</h3>
+      <p>Interior crafted from recycled PET bottles and vegan leather alternatives.</p>
+    </div>
+  </section>
+
+  <!-- TEST DRIVE FORM SECTION -->
+  <section class="form-section">
+    <div class="form-container">
+      <h2 class="form-title">Schedule Your Test Drive</h2>
+      <p class="form-subtitle">Experience the future of mobility with the Mercedes Vision AVTR</p>
+      
+      <form class="test-drive-form" action="#" method="POST">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="first-name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="location">Preferred Dealership</label>
+          <select id="location" name="location" required>
+            <option value="">Select a location</option>
+            <option value="new-york">New York</option>
+            <option value="los-angeles">Los Angeles</option>
+            <option value="chicago">Chicago</option>
+            <option value="miami">Miami</option>
+            <option value="dallas">Dallas</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+        
+        <div class="form-group full-width">
+          <label for="message">Special Requests</label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Request Test Drive</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Vrooom</h3>
+        <p>Experience the future of automotive innovation with Mercedes-Benz's most advanced concept vehicles.</p>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Models</a></li>
+          <li><a href="#">Technology</a></li>
+          <li><a href="#">Test Drives</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <address>
+          <p>123 Automotive Drive<br>
+          Beverly Hills, CA 90210</p>
+          <p>Phone: (800) 555-VROOM<br>
+          Email: info@vrooom.com</p>
+        </address>
+      </div>
+      
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#">FB</a>
+          <a href="#">IG</a>
+          <a href="#">TW</a>
+          <a href="#">YT</a>
+        </div>
+        <div style="margin-top: 20px;">
+          <p>Subscribe to our newsletter</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email">
+            <button type="submit">→</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>
+        &copy; 2023 Vrooom. All rights reserved. | 
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Service</a>
+      </p>
+      <p class="legal-text">
+        Mercedes-Benz and Vision AVTR are registered trademarks. This is a conceptual demonstration only.
+      </p>
+    </div>
+  </footer>
+
+</body>
+>>>>>>> 0c621065e1f52bee7352c050b8490dc933969086
 </html>
